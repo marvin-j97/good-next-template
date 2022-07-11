@@ -5,7 +5,7 @@ type Data = { sum: number } | { message: string };
 /**
  * Route that returns the sum of two numbers
  */
-export default function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
+export default function handler(req: NextApiRequest, res: NextApiResponse<Data>): void {
   const a = parseInt(String(req.query.a));
   const b = parseInt(String(req.query.b));
 

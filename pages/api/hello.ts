@@ -4,6 +4,6 @@ import type { NextApiRequest, NextApiResponse } from "next";
 /**
  * Hello world route handler
  */
-export default function handler(_: NextApiRequest, res: NextApiResponse<string>) {
+export default function handler(_: NextApiRequest, res: NextApiResponse<string>): void {
   res.status(200).send("Hello world!");
 }
