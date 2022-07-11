@@ -1,5 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
+import { add } from "../../../../util/arithmetic";
+
 type Data = { sum: number } | { message: string };
 
 /**
@@ -13,5 +15,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
     return res.status(400).json({ message: "Bad request" });
   }
 
-  res.status(200).json({ sum: a + b });
+  res.status(200).json({ sum: add(a, b) });
 }
