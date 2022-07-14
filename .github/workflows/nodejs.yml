@@ -24,6 +24,13 @@ jobs:
       - run: yarn
       - run: yarn build:test
       - run: yarn coverage
+      - run: ls .report_e2e
+      - run: ls .report_unit
       - uses: codecov/codecov-action@v3
         with:
-          file: .report_e2e/lcov.info,.report_unit/lcov.info
+          flags: unit
+          file: .report_unit/lcov.info
+      - uses: codecov/codecov-action@v3
+        with:
+          flags: e2e
+          file: .report_e2e/lcov.info
