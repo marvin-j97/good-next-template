@@ -26,4 +26,4 @@ jobs:
       - run: yarn coverage
       - uses: codecov/codecov-action@v3
         with:
-          file: ./.coverage_e2e/coverage-final.json,./.coverage_unit/coverage-final.json
+          file: .report_e2e/lcov.info,.report_unit/lcov.info

@@ -13,7 +13,7 @@
     "test:unit:open": "vitest run --ui",
     "test:e2e": "cypress run",
     "coverage": "yarn coverage:unit && yarn coverage:e2e",
-    "coverage:e2e": "start-server-and-test 'cross-env NODE_ENV=test INSTRUMENT_COVERAGE=1 next start' http://localhost:3000 test:e2e && nyc report --report-dir .coverage_e2e --reporter json",
+    "coverage:e2e": "start-server-and-test 'cross-env NODE_ENV=test INSTRUMENT_COVERAGE=1 next start' http://localhost:3000 test:e2e && nyc report --report-dir .report_e2e --reporter lcov",
     "coverage:unit": "vitest run --coverage"
   },
   "dependencies": {
