@@ -8,6 +8,7 @@
     "build": "next build",
     "build:test": "cross-env INSTRUMENT_COVERAGE=1 next build",
     "lint": "next lint",
+    "lint:fix": "yarn lint --fix",
     "test:unit": "vitest run",
     "test:unit:open": "vitest run --ui",
     "test:e2e": "cypress run",
