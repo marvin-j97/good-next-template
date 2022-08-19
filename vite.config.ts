@@ -4,7 +4,8 @@ import { defineConfig } from "vite";
 export default defineConfig({
   test: {
     coverage: {
-      reporter: "lcov",
+      provider: "istanbul",
+      reporter: "json",
       reportsDirectory: ".report_unit",
     },
   },

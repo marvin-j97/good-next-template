@@ -13,7 +13,7 @@
     "test:unit:open": "vitest run --ui",
     "test:e2e": "cypress run",
     "coverage": "yarn coverage:unit && yarn coverage:e2e",
-    "coverage:e2e": "start-server-and-test 'cross-env NODE_ENV=test INSTRUMENT_COVERAGE=1 next start' http://localhost:3000 test:e2e && nyc report --report-dir .report_e2e --reporter lcov",
+    "coverage:e2e": "start-server-and-test 'cross-env NODE_ENV=test INSTRUMENT_COVERAGE=1 next start' http://localhost:3000 test:e2e && nyc report --report-dir .report_e2e --reporter json",
     "coverage:unit": "vitest run --coverage"
   },
   "dependencies": {
@@ -27,10 +27,10 @@
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
     "@typescript-eslint/eslint-plugin": "5.30.6",
-    "@typescript-eslint/parser": "^5.30.6",
-    "@vitest/ui": "0.18.0",
+    "@typescript-eslint/parser": "5.30.6",
+    "@vitest/coverage-istanbul": "0.22.1",
+    "@vitest/ui": "0.22.1",
     "babel-plugin-istanbul": "6.1.1",
-    "c8": "7.11.3",
     "cross-env": "7.0.3",
     "cypress": "10.3.0",
     "eslint": "8.19.0",
@@ -43,6 +43,6 @@
     "start-server-and-test": "1.14.0",
     "ts-node": "10.8.2",
     "typescript": "4.7.4",
-    "vitest": "0.18.0"
+    "vitest": "0.22.1"
   }
 }
